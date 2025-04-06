@@ -15,19 +15,21 @@ Use this checklist to track the project's progress across different domains.
 
 ### 🛠️ Build & Setup
 
-- [ ] Initialize Git repository
-- [ ] Setup backend (Spring Boot)
-- [ ] Setup frontend (React)
+- [X] Initialize Git repository
+- [X] Setup backend (Spring Boot)
+- [X] Setup frontend (React)
 - [ ] Setup database schema
-- [ ] Install and configure required Java dependencies:
-  - [ ] JDBC
-  - [ ] Spring Boot
-  - [ ] Spring Dev Tools
-  - [ ] Swagger (for API documentation)
-- [ ] Install and configure React dependencies:
-  - [ ] React Router
-  - [ ] Axios
-  - [ ] Bulma CSS
+- [X] Install and configure required Java dependencies:
+  - [X] JDBC
+  - [X] Spring Boot
+  - [X] Spring Dev Tools
+  - [X] Swagger (for API documentation) -> springdoc-openapi-starter-webmvc-ui
+  - [X] Server runs in -> ```http://localhost:6262/```
+- [X] Install and configure React dependencies:
+  - [X] React Router
+  - [X] Axios
+  - [X] Bulma CSS
+  - [X] Server runs in -> ```http://localhost:6161/```
 - [ ] Set up environment configuration files
 
 ---
@@ -35,17 +37,17 @@ Use this checklist to track the project's progress across different domains.
 ### 📦 Backend
 
 #### ✅ Models & Entities
-- [ ] Create `User` model
-- [ ] Create `Group` model
-- [ ] Create `Post` model
-- [ ] Create `GroupMember` model
-- [ ] Create `GroupAdmin` model
-- [ ] Create `UserPost` model
-- [ ] Create `GroupPost` model
-- [ ] Create `UserChat` model
-- [ ] Create `UserFriends` model
+- [X] Create `User` model
+- [X] Create `Group` model
+- [X] Create `Post` model
 
 #### 🔗 Relationships
+- [ ] Create `GroupMember` relation
+- [ ] Create `GroupAdmin` relation
+- [ ] Create `UserPost` relation
+- [ ] Create `GroupPost` relation
+- [ ] Create `UserChat` relation
+- [ ] Create `UserFriends` relation
 - [ ] Define relationships between Users, Posts, and Groups
 - [ ] Setup many-to-many relationships for group members and friends
 - [ ] Setup one-to-many and many-to-one relations as needed
@@ -92,9 +94,10 @@ Use this checklist to track the project's progress across different domains.
 - [ ] Post feed (latest posts from friends)
 - [ ] Group posts feed
 - [ ] Group members display
+- [ ] Navbar
 
 #### 🔗 Routing
-- [ ] Configure React Router for navigation
+- [X] Configure React Router for navigation
 - [ ] Private/protected routes after login
 
 #### 📡 API Integration
