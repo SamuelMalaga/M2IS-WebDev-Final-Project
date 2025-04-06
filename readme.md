@@ -42,12 +42,12 @@ Use this checklist to track the project's progress across different domains.
 - [X] Create `Post` model
 
 #### 🔗 Relationships
-- [ ] Create `GroupMember` relation
-- [ ] Create `GroupAdmin` relation
-- [ ] Create `UserPost` relation
-- [ ] Create `GroupPost` relation
-- [ ] Create `UserChat` relation
-- [ ] Create `UserFriends` relation
+- [X] Create `GroupMember` relation
+- [X] Create `GroupAdmin` relation
+- [X] Create `UserPost` relation
+- [ ] Create `GroupPost` relation -> Fix needed, extra column is added, group name
+- [X] Create `UserChat` relation
+- [X] Create `UserFriends` relation
 - [ ] Define relationships between Users, Posts, and Groups
 - [ ] Setup many-to-many relationships for group members and friends
 - [ ] Setup one-to-many and many-to-one relations as needed

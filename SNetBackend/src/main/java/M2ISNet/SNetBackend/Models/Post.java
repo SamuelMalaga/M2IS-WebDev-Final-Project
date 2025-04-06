@@ -19,4 +19,12 @@ public class Post {
 
     @Column(nullable = false)
     private String postContent;
+
+    @ManyToOne
+    @JoinColumn(name = "userId", insertable = true, updatable = false)
+    private User postAuthor;
+
+    @ManyToOne
+    @JoinColumn(name = "groupId", insertable = true, updatable = false)
+    private Group postGroup;
 }
