@@ -79,13 +79,15 @@ Use this checklist to track the project's progress across different domains.
 ### 🎨 Frontend
 
 #### 📄 Pages & Views
+- [X] Setup Page layout
 - [ ] Front page (Landing)
 - [ ] Register page
-- [ ] Login modal
+- [ ] Login page
 - [ ] Home page
 - [ ] Group page
 
 #### 🔁 Components
+- [x] Navbar
 - [ ] Spinner (loading)
 - [ ] Post creation modal
 - [ ] Group creation modal
@@ -94,7 +96,7 @@ Use this checklist to track the project's progress across different domains.
 - [ ] Post feed (latest posts from friends)
 - [ ] Group posts feed
 - [ ] Group members display
-- [ ] Navbar
+
 
 #### 🔗 Routing
 - [X] Configure React Router for navigation
