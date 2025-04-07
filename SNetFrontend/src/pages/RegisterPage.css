@@ -1,0 +1,52 @@
+/* Main input styles */
+input[type="date"].bulma-datepicker {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Modify the padding for a more compact look */
+    padding-right: 1em; /* This space keeps room for the calendar icon. You can reduce it for a more compact feel. */
+    
+    font-family: inherit;
+    font-size: 1rem; /* Adjust the font size for smaller text */
+    line-height: 1.5;
+    
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    transition: border-color 0.2s ease-in-out;
+    
+    cursor: pointer; /* Makes the whole box feel clickable */
+    
+    width: 200px; /* Adjust this value for a smaller width input */
+  }
+  
+  /* When input is focused (e.g., clicked) */
+  input[type="date"].bulma-datepicker:focus {
+    border-color: #485fc7;
+    box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+  }
+  
+  /* Styling for the calendar icon inside */
+  input[type="date"].bulma-datepicker::-webkit-calendar-picker-indicator {
+    filter: invert(40%);
+    opacity: 0.7;
+    cursor: pointer;
+    
+    /* Adjust icon size */
+    height: 1.2em;
+    width: 0.5em;
+    
+    /* Positioning of the icon */
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Let click pass through to input */
+  }
+  
+  /* For Firefox and general accessibility */
+  input[type="date"].bulma-datepicker::-moz-focus-inner {
+    border: 0;
+  }
+  

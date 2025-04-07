@@ -31,21 +31,5 @@ function NavBar(){
         </>
     )
 }
-{/* <nav>
-            <ul>
-              <li>
-                <Link to="/">Landing Page</Link>
-              </li>
-              <li>
-                <Link to="/home">Home Page</Link>
-              </li>
-              <li>
-                <Link to="/register">Register Page</Link>
-              </li>
-              <li>
-                <Link to="/group">Group Page</Link>
-              </li>
-            </ul>
-          </nav> */}
 
 export default NavBar;
