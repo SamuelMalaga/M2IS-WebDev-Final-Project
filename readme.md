@@ -45,22 +45,22 @@ Use this checklist to track the project's progress across different domains.
 - [X] Create `GroupMember` relation
 - [X] Create `GroupAdmin` relation
 - [X] Create `UserPost` relation
-- [ ] Create `GroupPost` relation -> Fix needed, extra column is added, group name
+- [X] Create `GroupPost` relation -> Fix needed, extra column is added, group name
 - [X] Create `UserChat` relation
 - [X] Create `UserFriends` relation
-- [ ] Define relationships between Users, Posts, and Groups
-- [ ] Setup many-to-many relationships for group members and friends
-- [ ] Setup one-to-many and many-to-one relations as needed
+- [X] Define relationships between Users, Posts, and Groups
+- [X] Setup many-to-many relationships for group members and friends
+- [X] Setup one-to-many and many-to-one relations as needed
 
 #### 💡 Repositories
-- [ ] Create JPA Repositories for each model
+- [X] Create JPA Repositories for each model
 
-#### 🔧 Services
-- [ ] Implement Services for Users
-- [ ] Implement Services for Groups
-- [ ] Implement Services for Posts
-- [ ] Implement Services for Chats
-- [ ] Implement Services for Friendships
+#### 🔧 Services -> partially done
+- [X] Implement Services for Users
+- [X] Implement Services for Groups
+- [X] Implement Services for Posts
+- [X] Implement Services for Chats
+- [X] Implement Services for Friendships
 
 #### 🌐 Controllers
 - [ ] Build RESTful APIs for Users

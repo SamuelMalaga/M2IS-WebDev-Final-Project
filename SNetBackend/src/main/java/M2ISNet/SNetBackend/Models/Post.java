@@ -2,6 +2,7 @@ package M2ISNet.SNetBackend.Models;
 
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.lang.Nullable;
 
 import java.util.Date;
@@ -14,7 +15,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long postId;
 
-    @Column(nullable = false)
+    @CreationTimestamp
     private Date postDate;
 
     @Column(nullable = false)
@@ -27,4 +28,40 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "groupId", insertable = true, updatable = false)
     private Group postGroup;
+
+    public User getPostAuthor() {
+        return postAuthor;
+    }
+
+    public void setPostAuthor(User postAuthor) {
+        this.postAuthor = postAuthor;
+    }
+
+    public Group getPostGroup() {
+        return postGroup;
+    }
+
+    public void setPostGroup(Group postGroup) {
+        this.postGroup = postGroup;
+    }
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public Date getPostDate() {
+        return postDate;
+    }
+
+    public void setPostDate(Date postDate) {
+        this.postDate = postDate;
+    }
+
+    public String getPostContent() {
+        return postContent;
+    }
+
+    public void setPostContent(String postContent) {
+        this.postContent = postContent;
+    }
 }
