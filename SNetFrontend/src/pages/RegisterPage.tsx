@@ -1,12 +1,18 @@
 import React from "react";
 import './RegisterPage.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {useState} from 'react';
 import axios from 'axios';
 
 
 
 function RegisterPage(){
+    const [registerFormNotification,setregisterFormNotification] = useState(
+        {
+            message:"",
+            notification_display:"is-hidden"
+        }
+    )
     const [createUserFormData, setCreateUserFormData] = useState({
         user_name:"",
         user_email:"",
@@ -30,9 +36,24 @@ function RegisterPage(){
         .then(function (response){
             console.log("Response",response)
         }).catch(function (error){
-            console.log(error)
+            // console.log(error.response.data)
+            setregisterFormNotification({
+                message: error.response.data,
+                notification_display:""
+            })
         })
+        // navigate("/")
     }
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          const $notification = $delete.parentNode;
+            
+          $delete.addEventListener('click', () => {
+            $notification?.parentNode?.removeChild($notification);
+          });
+        });
+      });
 
     return(
         <>
@@ -40,6 +61,10 @@ function RegisterPage(){
             <section className="section">
                 <h1 className="title is-1 has-text-black">Create Account</h1>
             </section>
+            <div className={`notification is-danger is-light ${registerFormNotification.notification_display}`}>
+                <button className="delete"></button>
+                <p>{registerFormNotification.message}</p>
+            </div>
             <section className="section">
             <div className="field">
                 <label className="label has-text-black">Name</label>

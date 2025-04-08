@@ -54,4 +54,8 @@ public class UserService {
         return userRepository.getAllUserGroupsOrderedByGroupCreationDate(userId);
     }
 
+    public Optional<User> findUserByEmail(String userEmail){
+        return userRepository.findUserByUserEmail(userEmail);
+    }
+
 }
