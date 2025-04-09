@@ -48,6 +48,17 @@ public class UserController {
         }
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<String> home() {
+        return new ResponseEntity<>("Test OK", HttpStatus.OK);
+    }
+
+    @GetMapping("/testAuth")
+    public ResponseEntity<String> homeAuth() {
+        return new ResponseEntity<>("Test OK", HttpStatus.OK);
+    }
+
+
 
 
 }
