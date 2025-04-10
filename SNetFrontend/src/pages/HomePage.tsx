@@ -2,6 +2,8 @@ import React from "react";
 import PostComponent from "./components/PostComponent";
 import './HomePage.css';
 import PersonalSectionComponent from "./components/PersonalSectionComponent";
+import ChatComponent from "./components/ChatComponent";
+
 
 function HomePage(){
 
@@ -14,7 +16,7 @@ function HomePage(){
         <div className="container pt-2">
             <div className="columns ">
                 <div className="column ">
-                    <div className="container" id="postDisplayArea">
+                    <div className="container pr-1" id="postDisplayArea">
                         <PostComponent
                             postAuthor="Author"
                             postContent="Content"
@@ -46,14 +48,12 @@ function HomePage(){
                 <div className="column is-two-fifths ">
                     <div className="fixed-grid has-1-cols ">
                         <div className="column pt-0">
-                        <PersonalSectionComponent
-                        logged_user={logged_user}
-                        />
+                            <PersonalSectionComponent
+                            logged_user={logged_user}
+                            />
                         </div>
                         <div className="column">
-                        <div className="notification is-primary">
-                                chat section
-                            </div>
+                            <ChatComponent/>
                         </div>
                     </div>  
                 </div>
