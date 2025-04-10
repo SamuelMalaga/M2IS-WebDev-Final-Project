@@ -11,12 +11,12 @@ function NavBar(){
             
             <div className="navbar-menu">
                 <div className="navbar-start">
-                <a className="navbar-item">
-                    Home
-                </a>
-                <a className="navbar-item">
-                    Navigation Stuff
-                </a>
+                <Link className="navbar-item" to="/home">
+                        Home page - ATH
+                </Link>
+                <Link className="navbar-item" to="/group">
+                        GroupPage
+                </Link>
                 </div>
                 <div className="navbar-end">
                     <Link className="navbar-item" to="/login">

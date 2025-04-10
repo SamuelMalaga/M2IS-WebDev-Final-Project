@@ -4,7 +4,7 @@ import 'bulma/css/bulma.min.css';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Layout from './pages/Layout'
+import Layout from './layouts/Layout'
 import LandingPage from './pages/LandingPage'
 import RegisterPage from './pages/RegisterPage'
 import HomePage from './pages/HomePage'
