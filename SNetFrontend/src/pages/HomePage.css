@@ -1,0 +1,4 @@
+#postDisplayArea {
+    overflow:scroll;
+    max-height: 85vh;
+}
