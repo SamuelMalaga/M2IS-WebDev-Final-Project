@@ -1,5 +1,14 @@
 #chatDisplayTable {
     width: 100%;
-    overflow: scroll;
-    max-height: 1vh;
 }
+#chatButton{
+    border-radius: 0;
+}
+#chatsSection{
+    max-height: 40vh;
+    overflow: scroll;
+}
+#chatContainer{
+    border-radius: 10px 10px 10px 10px;
+}
+

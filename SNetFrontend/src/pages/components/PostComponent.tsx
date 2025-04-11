@@ -3,7 +3,7 @@ import React from "react";
 function PostComponent({postAuthor, postInfo, postContent}){
     return(
         <>
-            <div className="card">
+            <div className="container pt-3 pl-3 pr-3">
                 <div className="card-content">
                     <div className="media">
                     <div className="media-left">
@@ -20,10 +20,9 @@ function PostComponent({postAuthor, postInfo, postContent}){
                     </div>
                     </div>
 
-                    <div className="content">
+                    <div className="content has-text-white">
                         <p>{postContent}</p>
                     <br />
-                    {/* <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> */}
                     </div>
                 </div>
             </div>

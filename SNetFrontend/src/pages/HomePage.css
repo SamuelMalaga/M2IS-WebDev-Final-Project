@@ -1,4 +1,16 @@
 #postDisplayArea {
     overflow:scroll;
     max-height: 85vh;
+    border-radius: 5px 5px 10px 10px;
+}
+#postDisplayArea > div:not(:last-child){
+    border-bottom: 1px solid grey;
+}
+#postDisplayArea > div:first-of-type{
+    border-bottom: 3px solid grey;
+}
+#postDisplayArea > #postFormContainer{
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
