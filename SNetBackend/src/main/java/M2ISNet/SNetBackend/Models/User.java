@@ -105,4 +105,8 @@ public class User {
     public Set<Group> getUserGroups() {
         return userGroups;
     }
+
+    public Long getUserId() {
+        return userId;
+    }
 }

@@ -3,14 +3,12 @@ package M2ISNet.SNetBackend.Services;
 import M2ISNet.SNetBackend.Models.Group;
 import M2ISNet.SNetBackend.Models.Post;
 import M2ISNet.SNetBackend.Models.User;
+import M2ISNet.SNetBackend.Models.UserChat;
 import M2ISNet.SNetBackend.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -42,6 +40,20 @@ public class UserService {
         return foundUser.get().getUserFriends();
     }
 
+//    Get all the posts for the user feed (his posts + friends post)
+    public List<Post> getUserFeed(
+            Long userId
+    ){
+        Set<User> userFriends = getUserFriends(userId);
+        List<Post> userFeedPosts = new ArrayList<>();
+
+        //TODO: Sort it by date
+        for(User friend : userFriends ){
+            userFeedPosts.addAll(getUserPosts(friend.getUserId()));
+        }
+        return userFeedPosts;
+    }
+
     public List<Post> getUserPosts(
             Long userId
     ){
@@ -56,6 +68,12 @@ public class UserService {
 
     public Optional<User> findUserByEmail(String userEmail){
         return userRepository.findUserByUserEmail(userEmail);
+    }
+
+    public List<UserChat> getUserChat(
+            Long userId
+    ){
+        return userRepository.getAllUserChatsOrderedByChatCreationDate(userId);
     }
 
 }

@@ -1,6 +1,7 @@
 package M2ISNet.SNetBackend.Controllers;
 
 import M2ISNet.SNetBackend.DataTransferObjects.RegisterUserForm;
+import M2ISNet.SNetBackend.Models.UserChat;
 import M2ISNet.SNetBackend.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,6 +44,8 @@ public class UserController {
             return new ResponseEntity<>("User Created Successfully", HttpStatus.OK);
         }
     }
+
+
 
     @GetMapping("/test")
     public ResponseEntity<String> home() {
