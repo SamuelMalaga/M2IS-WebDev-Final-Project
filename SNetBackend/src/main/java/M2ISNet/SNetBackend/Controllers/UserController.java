@@ -1,8 +1,6 @@
 package M2ISNet.SNetBackend.Controllers;
 
 import M2ISNet.SNetBackend.DataTransferObjects.RegisterUserForm;
-import M2ISNet.SNetBackend.Models.User;
-import M2ISNet.SNetBackend.ResponseObjects.ResponseTransfer;
 import M2ISNet.SNetBackend.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,9 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/user")
